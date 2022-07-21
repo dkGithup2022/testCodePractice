@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +17,7 @@ class StudyTest {
 
     @Test
     @DisplayName("assert error message  : Excutable 객체 넣어보기 ")
+    @Disabled
     void create_study_2() {
         Study s1 = new Study(StudyDraft.ACTIVE, 1);
         assertNull(s1, new Supplier<String>() {
@@ -28,6 +30,7 @@ class StudyTest {
 
     @Test
     @DisplayName("assert error message  : 람다 넣어보기  ")
+    @Disabled
     void create_study_3() {
         Study s1 = new Study(StudyDraft.ACTIVE, 1);
         assertNull(s1, () -> "람다 넣어보기");
@@ -35,6 +38,7 @@ class StudyTest {
 
     @Test
     @DisplayName("assert error message  : 간략하게 메세지만   ")
+    @Disabled
     void create_study_4() {
         Study s1 = new Study(StudyDraft.ACTIVE, 11);
         assertNull(s1, "메세지만 ");
@@ -42,6 +46,7 @@ class StudyTest {
 
     @Test
     @DisplayName(" 에러 발생 테스트 해보기 -> assertThrows")
+    @Disabled
     void throw_invalid_parameter_on_study() {
         assertThrows(IllegalArgumentException.class, () -> {
             Study s1 = new Study(StudyDraft.ACTIVE, -1);
@@ -50,6 +55,7 @@ class StudyTest {
 
     @Test
     @DisplayName(" 에러 발생 테스트 해보기 -> 에러 메세지 까지 확인 ")
+    @Disabled
     void throw_invalid_parameter_on_study_2() {
         IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> {
             Study s1 = new Study(StudyDraft.ACTIVE, -1);
@@ -60,6 +66,7 @@ class StudyTest {
 
     @Test
     @DisplayName("시간 재기")
+    @Disabled
     void test_assert_timeout() {
         assertTimeout(Duration.ofMillis(100), () -> {
             Thread.sleep(1000);
@@ -68,6 +75,7 @@ class StudyTest {
 
     @Test
     @DisplayName("시간 재기 preemtively")
+    @Disabled
     void test_assert_timeout_preemtively() {
         assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
             Thread.sleep(1000);

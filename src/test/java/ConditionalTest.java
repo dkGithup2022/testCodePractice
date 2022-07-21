@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
@@ -38,6 +39,7 @@ public class ConditionalTest {
 
     @Test
     @EnabledOnOs(OS.LINUX)
+    @Disabled
     void conditional_test_4(){
         System.out.println("this is linux");
         assertNull(null);
@@ -51,6 +53,7 @@ public class ConditionalTest {
 
     @Test
     @EnabledOnJre(JRE.JAVA_11)
+    @Disabled
     void conditional_test_6(){
         System.out.println("this is java version 11");
         assertNull(null);
@@ -58,6 +61,7 @@ public class ConditionalTest {
 
     @Test
     @EnabledIfEnvironmentVariable(named = "TEST_ENV", matches = "LOCAL")
+    @Disabled
     void conditional_test_7(){
         System.out.println(" ${TEST_ENV} is LOCAL");
         assertNull(null);
