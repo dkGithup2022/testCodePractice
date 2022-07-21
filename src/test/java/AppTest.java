@@ -6,13 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
 
     @Test
-    void createTest(){
+    @DisplayName("객체 생성 | 생성자 없음 ")
+    void create_test(){
         App app = new App();
         assertNotNull(app);
     }
 
     @Disabled
-    @Test void testtest(){
+    @DisplayName("deprecated 된 코드 ")
+    @Test void test_test(){
         assertNotNull(null);
     }
 
