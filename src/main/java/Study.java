@@ -1,6 +1,12 @@
+import lombok.AllArgsConstructor;
+import lombok.ToString;
+
+@ToString
+@AllArgsConstructor
 public class Study {
     private StudyDraft studyDraft;
     private int memeberCount ;
+    private String name;
 
     public Study(StudyDraft studyDraft, int memeberCount){
         this.studyDraft = studyDraft;
