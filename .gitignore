@@ -1,0 +1,10 @@
+
+# extension
+*.log
+*.bak
+
+# folder
+
+/logs
+/target
+/.idea
